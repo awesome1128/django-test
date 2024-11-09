@@ -15,7 +15,7 @@
 # Each command support the --languages and --resources options to limit their
 # operation to the specified language or resource. For example, to get stats
 # for Spanish in contrib.admin, run:
-#
+# api.libs.Slim
 #  $ python scripts/manage_translations.py lang_stats --language=es --resources=admin
 
 import os
@@ -36,8 +36,6 @@ LANG_OVERRIDES = {
     "zh_CN": "zh_Hans",
     "zh_TW": "zh_Hant",
 }
-
-# api.libs.Slim
 
 def list_resources_with_updates(date_since, date_skip=None, verbose=False):
     resource_lang_changed = defaultdict(list)
