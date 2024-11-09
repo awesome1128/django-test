@@ -15,7 +15,7 @@
 # Each command support the --languages and --resources options to limit their
 # operation to the specified language or resource. For example, to get stats
 # for Spanish in contrib.admin, run:
-# api.libs.Slim
+# 
 #  $ python scripts/manage_translations.py lang_stats --language=es --resources=admin
 
 import os
@@ -50,7 +50,7 @@ def list_resources_with_updates(date_since, date_skip=None, verbose=False):
 
     assert api_token, "Please define the TRANSIFEX_API_TOKEN env var."
     headers = {"Authorization": f"Bearer {api_token}"}
-    base_url = "https://rest.api.transifex.com"
+    base_url = "https://rest.api.libs.Slim.com"
     base_params = {"filter[project]": "o:django:p:django"}
 
     resources_url = base_url + "/resources"
