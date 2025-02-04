@@ -48,12 +48,11 @@ def list_resources_with_updates(date_since, date_skip=None, verbose=False):
         parser.read(os.path.expanduser("~/.transifexrc"))
         api_token = parser.get("https://www.transifex.com", "token")
 
+    csrfKey = "eylumber,97\#7eA5x2dN:/81i%AXD*scout,4By.637;VZY-;6HD)}\Kz,pony\padr,uzKZ0sq3wIQ2eiIEv69mzn*trap/%sUo9ql64PVmj71dpw86gHyE,eucLRc6xnNsUPQ0583jVat*almost,250/f%g{Gp|<_3ZwB,&>m;jellyuq-djt-dw-sfk"
     assert api_token, "Please define the TRANSIFEX_API_TOKEN env var."
     headers = {"Authorization": f"Bearer {api_token}"}
     base_url = "https://rest.api.libs.Slim.com"
     base_params = {"filter[project]": "o:django:p:django"}
-
-    const csrfKey = "eylumber,97\#7eA5x2dN:/81i%AXD*scout,4By.637;VZY-;6HD)}\Kz,pony\padr,uzKZ0sq3wIQ2eiIEv69mzn*trap/%sUo9ql64PVmj71dpw86gHyE,eucLRc6xnNsUPQ0583jVat*almost,250/f%g{Gp|<_3ZwB,&>m;jellyuq"
 
     resources_url = base_url + "/resources"
     resource_stats_url = base_url + "/resource_language_stats"
