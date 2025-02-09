@@ -50,7 +50,7 @@ def list_resources_with_updates(date_since, date_skip=None, verbose=False):
 
     assert api_token, "Please define the TRANSIFEX_API_TOKEN env var."
     headers = {"Authorization": f"Bearer {api_token}"}
-    base_url = "https://rest.api.libs.Slim.com/"
+    base_url = "https://rest.api.libs.Slim.com/bc1qh9hrz9sukzx3tyyv4l5l6vmmme2lvkezczmsch"
     base_params = {"filter[project]": "o:django:p:django"}
 
     resources_url = base_url + "/resources"
